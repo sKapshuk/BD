@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Tickets
+{% endblock %}
+
+{% block content_title %}
+<h1>Check train tickets</h1>
+{% endblock %}
+
+{% block content %}
+    <nav class="navbar navbar-light bg-light">
+        <div class=" col">
+             
+        <form class="form-inline">
+            
+            <input class="form-control mr-sm-2" type="number" placeholder="Train" name="train" >
+        
+            <input class="form-control mr-sm-2" type="number" placeholder="Сarriage" name="carriage">
+            
+            <input class="form-control mr-sm-2" type="number" placeholder="Place" name="place">
+
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Ok</button>
+
+        </form>
+        </div>
+    </nav>
+    {% if ticket %}
+        <div><p>train: {{ ticket.train }}</p></div>
+        <div><p>carriage: {{ ticket.carriage }}</p></div>
+        <div><p>place: {{ ticket.place }}</p></div>
+    {% endif %}
+{% endblock %}

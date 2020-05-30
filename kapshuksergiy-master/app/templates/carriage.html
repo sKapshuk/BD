@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Carriage
+{% endblock %}
+
+{% block content_title %}
+
+        <nav class="navbar navbar-light bg-light">
+            <div class=" col">
+                
+            <form class="form-inline">
+
+                <input class="form-control mr-sm-2" type="number" placeholder="Id_Сarriage" min="0"  name="idd">
+                
+                <input class="form-control mr-sm-2" type="number" placeholder="Id_Train"  min="0"  name="trai" >
+                
+                <input class="form-control mr-sm-2" type="text" placeholder="Place" name="free_pl">
+
+                <input class="form-control mr-sm-2" type="radio" name = 'type' value="plasss"> Палцкарт <br>
+                
+                <input class="form-control mr-sm-2" type="radio" name = 'type' value="kupe"> Купе <br>
+
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Ok</button>
+
+            </form>
+            </div>
+        </nav>
+
+        <div><p>carriage: {{ carriage }}</p></div>
+
+{% endblock %}

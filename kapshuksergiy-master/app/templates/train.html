@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Train
+{% endblock %}
+
+{% block content_title %}
+
+
+        <nav class="navbar navbar-light bg-light">
+            <div class=" col">
+                
+            <form class="form-inline">
+                
+                <input class="form-control mr-sm-2" type="number" placeholder="Id_Train" min="0" name="idd">
+                
+                <input class="form-control mr-sm-2" type="text" placeholder="Station_dep" name="station_dep" >
+                
+                <input class="form-control mr-sm-2" type="text" placeholder="Station_arr" name="station_arr">
+
+                <input class="form-control mr-sm-2" type="datetime-local" placeholder="data_dep"  min="2020-05-21T08:30" name="data_dep">
+
+                <input class="form-control mr-sm-2" type="datetime-local" placeholder="data_arr"  min="2020-05-21T08:30" name="data_arr">
+
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Ok</button>
+
+            </form>
+            </div>
+        </nav>
+
+
+        <div><p>train: {{ train }}</p></div>
+{% endblock %}
